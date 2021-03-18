@@ -1,0 +1,147 @@
+{
+  "type": "document",
+  "author": "wizdm", 
+  "version": "1",
+  "content": [
+    { "type": "heading", "level": 1, "align": "center", "content": [
+      { "type": "text", "value": "Title", "style": ["bold"] }
+    ]},
+    { "type": "blockquote", "align": "left", "content": [
+      { "type": "paragraph", "align": "justify", "content": [
+        { "type": "text", "value": "This is an quote containing a list :)"}
+      ]},
+      { "type": "bulleted", "content": [
+        { "type": "paragraph", "content": [
+          { "type": "text", "value": "List item" }
+        ]},
+        { "type": "paragraph",  "content": [
+          { "type": "text", "value": "List item" }
+        ]}
+      ]}
+    ]},
+    { "type": "paragraph", "align": "justify", "content": [
+      { "type": "text", "value": "This is a "},
+      { "type": "text", "value": "bold", "style": ["bold"] },
+      { "type": "text", "value": " item..."}
+    ]},
+    { "type": "paragraph", "align": "justify", "content": [
+      { "type": "text", "value": "This is an "},
+      { "type": "text", "value": "emphasized", "style": ["italic"] },
+      { "type": "text", "value": " item..."}
+    ]},
+    { "type": "paragraph", "align": "justify", "content": [
+      { "type": "text", "value": "This is an "},
+      { "type": "text", "value": "underlined", "style": ["underline"] },
+      { "type": "text", "value": " item..."}
+    ]},
+    { "type": "heading", "level": 2, "align": "left", "content": [
+      { "type": "text", "value": "Links", "style": ["bold"] }
+    ]},
+    { "type": "paragraph", "align": "justify", "content": [
+      { "type": "text", "value": "Here's something new. "},
+      { "type": "link", "value": "This is a link", "url": "./" },
+      { "type": "text", "value": " pointing somewhere else.\nEventually." }
+    ]},
+    { "type": "heading", "level": 2, "align": "left", "content": [
+      { "type": "text", "value": "Lists", "style": ["bold"] }
+    ]},
+    { "type": "paragraph", "align": "justify", "content": [
+      { "type": "text", "value": "Yet another "},
+      { "type": "text", "value": "deleted", "style": ["strikethrough"] },
+      { "type": "text", "value": " item introducing lists\nHere an ordered one starting from 2:" }
+    ]},
+    { "type": "numbered", "start": 2, "content": [
+      { "type": "paragraph",  "content": [
+        { "type": "text", "value": "List item" }
+      ]},
+      { "type": "paragraph",  "content": [
+        { "type": "text", "value": "List item" }
+      ]}
+    ]},
+    { "type": "paragraph", "align": "left", "content": [
+      { "type": "text", "value": "...followed by an unordered multiple level one:" }
+    ]},
+    { "type": "bulleted", "content": [
+      { "type": "paragraph",  "content": [
+        { "type": "text", "value": "List item" }
+      ]},
+      { "type": "bulleted", "content": [
+        { "type": "paragraph",  "content": [
+          { "type": "text", "value": "Nested item" }
+        ]},
+        { "type": "paragraph",  "content": [
+          { "type": "text", "value": "Nested item" }
+        ]}
+      ]},
+      { "type": "paragraph",  "content": [
+        { "type": "text", "value": "List item" }
+      ]}
+    ]},
+    { "type": "heading", "level": 2, "align": "left", "content": [
+      { "type": "text", "value": "Tables", "style": ["bold"] }
+    ]},
+    { "type": "paragraph", "align": "justify", "content": [
+      { "type": "text", "value": "Introducing tables\nHere an example:" }
+    ]},
+    { "type": "figure", "align": "center", "content": [
+      { "type": "table", "align": "center", "content": [
+        { "type": "row", "content": [
+          { "type": "cell", "align": "left", "content": [
+            { "type": "text", "value": "One", "style": ["bold"]}
+          ]},
+          { "type": "cell", "align": "center", "content": [
+            { "type": "text", "value": "Two", "style": ["bold"]}
+          ]},
+          { "type": "cell", "align": "right", "content": [
+            { "type": "text", "value": "Three", "style": ["bold"]}
+          ]}
+        ]},
+        { "type": "row", "content": [
+          { "type": "cell", "align": "left", "content": [
+            { "type": "text", "value": "Four"}
+          ]},
+          { "type": "cell", "align": "center", "content": [
+            { "type": "text", "value": "Five"}
+          ]},
+          { "type": "cell", "align": "right", "content": [
+            { "type": "text", "value": "Six"}
+          ]}
+        ]},
+        { "type": "row", "content": [
+          { "type": "cell", "align": "left", "content": [
+            { "type": "text", "value": "Seven"}
+          ]},
+          { "type": "cell", "align": "center", "content": [
+            { "type": "text", "value": "Height"}
+          ]},
+          { "type": "cell", "align": "right", "content": [
+            { "type": "text", "value": "Nine"}
+          ]}
+        ]},
+        { "type": "row", "content": [
+          { "type": "cell", "align": "center", "colspan": 3, "content": [
+            { "type": "text", "value": "Ten"}
+          ]}
+        ]}
+      ]},
+      { "type": "caption", "align": "center", "content": [
+        { "type": "text", "value": "Here a table" }
+      ]}
+    ]},
+    { "type": "heading", "level": 2, "align": "left", "content": [
+      { "type": "text", "value": "Finally... pictures", "style": ["bold"] }
+    ]},
+    { "type": "paragraph", "align": "justify", "content": [
+      { "type": "text", "value": "Introducing pictures\nHere an example:" }
+    ]},
+    { "type": "figure", "align": "center", "content": [
+      { "type": "image", "size":"33", "url": "https://octodex.github.com/images/ironcat.jpg" },
+      { "type": "caption", "align": "center", "content": [
+        { "type": "text", "value": "Ironcat" }
+      ]}
+    ]},
+    { "type": "paragraph", "align": "left", "content": [
+      { "type": "text", "value": "Some text to conclude" }
+    ]}
+  ]
+}

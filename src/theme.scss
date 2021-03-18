@@ -1,0 +1,80 @@
+@import '~@angular/material/theming';
+ 
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$primary: mat-palette($mat-blue);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+$warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($primary, $accent, $warn);
+$app-typography: mat-typography-config();
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($app-theme);
+
+// Defines an additional mat-link class to decorate links diviating
+// from the strict rules of material design for the sake of clarity
+.mat-link {
+  cursor: pointer;
+  color: mat-color($primary) !important;
+  text-decoration: underline;
+}
+
+// Helper to dig into themes
+@function mat-theme-get($config, $level, $name) {
+  @return map-get(map-get($config, $level), $name);
+}
+
+@mixin init-application-theme() {
+
+  // Includes the core theme indepeneted material style
+  @include mat-core($app-typography);
+
+  // Include all the material theme styles
+  @include angular-material-theme($app-theme);
+ 
+  // Adds custom application specific style extensions
+  a {
+    &[mat-link] {
+      @extend .mat-link;
+    }
+  }
+
+  .mat-menu-content { padding: 0 !important;}
+  .mat-menu-panel { 
+    min-width: unset !important;
+    min-height: unset !important;
+  }
+
+  body { 
+     // Applies material typography rules globally
+    @extend .mat-typography; 
+   
+    // Blockquote style
+    blockquote {
+      padding: 0 1em;
+      color: rgba(0,0,0,0.535);
+      border-left: 0.25em solid rgba(0,0,0,0.11);
+    }
+
+    // Table style and alignement
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+
+      th, td {
+        padding: 6px 13px;
+        border: 1px solid #ddd;
+      }
+      
+      tr:nth-child(2n) {
+        background-color: rgba(0,0,0,0.03);
+      }
+    }
+  }
+}

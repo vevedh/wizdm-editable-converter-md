@@ -1,0 +1,24 @@
+
+<div class="desk">
+
+  <div #doc class="page" fxFlex="1 1 auto"
+    [wm-editable-document]="document$ | async"
+    [edit]="editMode"
+    [@editing]="editMode"
+    (contextmenu)="editMode && menu.open($event)"
+    (change)="onChange($event)"
+    (longpress)="lp.lookup($event)"
+    (navigate)="onNavigate($event)">
+  </div>
+
+</div>
+
+<wm-editable-toolbar *ngIf="editMode" [msgs]="tools" [sel]="doc.selection"></wm-editable-toolbar>
+
+<wm-editable-menu [msgs]="tools" [sel]="doc.selection" #menu></wm-editable-menu>
+
+<wm-editable-longpress [style.left.px]="doc.caret?.x" [style.top.px]="doc.caret?.y" [sel]="doc.selection" #lp></wm-editable-longpress> 
+
+<button mat-fab color="primary" (click)="toggleMode()" class="tools">
+  <mat-icon>{{ editMode ? 'done' : 'edit' }}</mat-icon>
+</button>

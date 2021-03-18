@@ -1,0 +1,55 @@
+
+:host {
+  position: fixed;
+  display: inline-block;
+
+
+  .key-list {
+
+    box-shadow: 0px 2px 3px 0px lightgrey;
+    //font-family: Cambria Math,STIXGeneral,Latin Modern Math, Helvetica;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 2px;
+    margin: 0px;
+    background: #FEFFFF;
+    font-size: 12pt;
+    border: 1px #C1D7FD solid;
+    list-style-type: none;
+    display: inline-block;
+    border-radius: 5px;
+    line-height: 21px;
+
+    li {
+      position: relative;
+      line-height: 21px;
+      border: 1px white solid;
+      border-radius: 4px;
+      background: white;
+      color: #0A7ED0;
+      text-align: center;
+      display: inline-block;
+      min-width: 24px;
+      cursor: pointer;
+
+      &.selected {
+        border: 1px #B9D6F0 solid;
+        background: #E5F1FE;
+        color: #0A7ED0;
+      }
+    }
+
+    .number {
+
+      font-weight: lighter;
+      //font-family: Helvetica;
+      text-align: center;
+      font-size: 9pt;
+      padding: 0px;
+      margin: 0px;
+      display: block;
+      color: #CBCCCC;
+    }
+  }
+}

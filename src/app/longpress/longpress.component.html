@@ -1,0 +1,6 @@
+
+<ul class="key-list" *ngIf="!!keys && keys.length > 0">
+  <li *ngFor="let key of keys; index as i" [class.selected]="i === pick" (click)="type(key)">
+    {{ key }}<span class="number">{{ i }}</span>
+  </li>
+</ul>
