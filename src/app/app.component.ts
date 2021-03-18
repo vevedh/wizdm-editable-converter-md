@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
 
     const context = {
 
-      name: "Wizdm",
+      name: "TEST",
       pitch: "The ultimate boilerplate to launch your single page application the quickest",
       description: "Wizdm provides all the key features of a modern single page application ready to use, so, for you to focus on launching your idea the quickest!"
 
